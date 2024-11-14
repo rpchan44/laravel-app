@@ -11,7 +11,7 @@ on:
 
 jobs:
    push_to_registry:
-    name: Push Docker image to Docker Hub and Update Kustomize
+    name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     
     steps:
@@ -29,9 +29,6 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: rpchan44/laravel-app
-
-      - name: Log Docker version
-        run: docker --version
 
       - name: Build Docker image
         run: |
