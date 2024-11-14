@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $message = "Welcome to the most amazing landing page!";
+    return view('landing', compact('message'));
 });
