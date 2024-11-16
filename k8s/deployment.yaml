@@ -15,6 +15,9 @@ spec:
       containers:
       - name: laravel-app
         image: rpchan44/laravel-apache-php81
+        resources:
+          requests:
+            cpu: "400m"
         ports:
         - containerPort: 80
 
